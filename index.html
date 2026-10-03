@@ -1,1 +1,112 @@
+<style>
+    body {
+        background-color: #23120c;
+        color: #d8b37e;
+        font-size: 14px;
+        margin: 0;
+        padding: 20px;
+        position: relative;
+    }
+    .astro-img {
+        transition: transform 0.4s ease, filter 0.3s ease;
+        cursor: pointer;
+    }
+    .astro-img:hover {
+        transform: translateY(-12px) scale(1.05);
+        filter: brightness(1.1);
+    }
+    .divider {
+        height: 2px;
+        background: linear-gradient(to right, transparent, #2dd67c, transparent);
+        margin: 30px auto;
+        width: 80%;
+    }
 
+    /* Kontajner na celú obrazovku pre hviezdičky */
+    #stars-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    /* Hviezdičky (tvar ★) s výraznejším pulzovaním */
+    .star {
+        position: absolute;
+        color: #ffd700;
+        text-shadow: 0 0 8px #ffd700;
+        animation: fall linear infinite, twinkle ease-in-out infinite;
+        user-select: none;
+    }
+
+    @keyframes fall {
+        0% {
+            transform: translateY(0) translateX(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(105vh) translateX(25px);
+            opacity: 0.1;
+        }
+    }
+
+    @keyframes twinkle {
+        0%, 100% { transform: scale(0.8); opacity: 0.3; }
+        50% { transform: scale(1.6); opacity: 1; text-shadow: 0 0 12px #ffeb3b; }
+    }
+</style>
+
+<!-- Kontajner pre hviezdičky -->
+<div id="stars-container"></div>
+
+<!-- Generovanie 15 hviezdičiek -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const container = document.getElementById("stars-container");
+        const numStars = 15;
+        for (let i = 0; i < numStars; i++) {
+            let star = document.createElement("div");
+            star.className = "star";
+            star.innerHTML = "★";
+            star.style.left = (Math.random() * 100) + "%";
+            star.style.top = (Math.random() * 100) + "vh";
+            star.style.fontSize = (Math.random() * 6 + 8) + "px"; 
+            star.style.animationDuration = (Math.random() * 6 + 4) + "s, " + (Math.random() * 2 + 1.5) + "s";
+            star.style.animationDelay = "-" + (Math.random() * 8) + "s, -" + (Math.random() * 2) + "s";
+            container.appendChild(star);
+        }
+    });
+</script>
+
+<center><img src=https://i.ibb.co/2Y5gHKX/astro.png width=56%></center>
+
+<p style="text-align: justify">Prírodná veda, ktorá sa <font color="#2dd67c">zaoberá skúmaním vesmíru, jeho štruktúrou, vývojom a fyzikálnymi zákonitosťami, ako aj pozorovaním a analýzou vesmírnych telies, planét, ich sústav a dejov vo vesmíre. </font>Samotný pojem astronómia pochádza z dvoch gréckych slov – <font color="#2dd67c"> astron</font> (hviezda) a <font color="#2dd67c"> nomos</font> (zákon). Dôležitosť astronomických poznatkov pre spoločnosť i vedu bola vždy veľká – umožňovala určovanie denného a ročného času, tvorbu kalendára, ako aj stanovenie zemepisnej polohy.</p>
+
+<div class="divider"></div>
+
+<center>
+    <img src="https://i.ibb.co/RDmcNdn/astro1.gif" class="astro-img" style=" margin-left: 2%; margin-right: 2%; width: 22%;" >
+    <img src="https://i.ibb.co/5kc6Fnr/astro2.gif" class="astro-img" style="margin-left: 2%; margin-right: 2%; width: 22%;" >
+    <img src="https://i.ibb.co/6wLdL9v/astro3.gif" class="astro-img" style=" margin-left: 2%; margin-right: 2%; width: 22%;" >
+</center>
+
+<div class="divider"></div>
+
+<p style="text-align: justify"><b>V rámci astronómie rozlišujeme viacero odvetví:</b><br><br>
+
+<i><font color="#2dd67c"><b> • Kozmológia</b></font></i> – zaoberá sa štúdiom vesmíru ako celku, jeho vznikom, štruktúrou, dynamikou a budúcim vývojom.<br>
+
+<i><font color="#2dd67c"><b> • Astrobiológia</b></font></i> – skúma možnosti existencie života vo vesmíre.<br>
+
+<i><font color="#2dd67c"><b> • Hviezdna astronómia</b></font></i> – zameriava sa na pozorovanie, klasifikáciu a vývoj hviezd, ako aj na usporiadanie hviezdnych sústav a súhvezdí.<br>
+<i><font color="#2dd67c"><b> • Planetárna astronómia</b></font></i> – venuje sa štúdiu planét v rámci slnečnej sústavy.<br> 
+
+<i><font color="#2dd67c"><b> • Meteorická a galaktická astronómia</b></font></i> – zahŕňa výskum meteoritov, komét a galaxií. 
+
+<br><br>Za sestru astronómie sa tradične považuje <b><font color="#2dd67c">astrológia,</b></font> skúma vzťah medzi postavením nebeským telies a dejmi, ktoré z týchto vzťahov môžu nastať a ich možným vplyvom na život na Zemi.</p>  
+
+<p style="text-align: right; clear: both;"><img src="https://i.ibb.co/tPtxVkk/pppp.png" width="13%"></p>
